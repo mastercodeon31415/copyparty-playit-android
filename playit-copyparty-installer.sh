@@ -3,8 +3,22 @@ GREEN='\033[0;32m'
 YELLOW='\033[0;33m'
 NC='\033[0m' # No Color
 
-printf "${GREEN}[###PlayIt Copyparty INSTALLER###] Installiung python into Termux\n${NC}"
+printf "${GREEN}[###PlayIt Copyparty INSTALLER###] Installing python and ffmpeg into Termux\n${NC}"
 pgk install python -y
+pgk install ffmpeg -y
+
+printf "${GREEN}[###PlayIt Copyparty INSTALLER###] Installing Copyparty optional deps into Termux\n${NC}"
+
+pkg install argon2 libjpeg-turbo libwebp -y
+pip install --upgrade Pillow
+pip install pillow-heif
+pip install pyvips
+pip install psutil
+pip install pyzmq
+pip install mutagen
+pip install argon2
+pip install argon2-cffi
+pip cache purge
 
 printf "${GREEN}[###PlayIt Copyparty INSTALLER###] Going to termux bin directory\n${NC}"
 cd /data/data/com.termux/files/usr/bin
