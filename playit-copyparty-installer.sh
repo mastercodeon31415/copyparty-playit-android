@@ -61,13 +61,10 @@ printf "${GREEN}[###PlayIt Copyparty INSTALLER###] Navigating to Termux home dir
 cd /data/data/com.termux/files/home
 
 wget https://github.com/9001/copyparty/releases/latest/download/copyparty-sfx.py
-
-#mv /data/data/com.termux/files/usr/bin/kali-fs/bin/copyparty.py ./copyparty-sfx.py
 touch ./copyparty
 echo python3 ./copyparty-sfx.py '"$@"' > ./copyparty
 chmod +x ./copyparty
 
-printf "${GREEN}[###PlayIt Copyparty INSTALLER###] Navigating back to termux home directory\n${NC}"
 cd 
 
 printf "${GREEN}[###PlayIt Copyparty INSTALLER###] PlayIt Copyparty Install complete! Starting kali chroot!\n${NC}"
