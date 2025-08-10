@@ -24,22 +24,22 @@ if [ "$first" != 1 ];then
 		*)
 			echo "unknown architecture"; exit 1 ;;
 		esac
-		wget https://github.com/mastercodeon31415/copyparty-playit-android/raw/refs/heads/main/rootfs/kali-rootfs-playit-copyparty.tar.xz.part-00 ./kali-rootfs-playit-copyparty.tar.xz.part-00
-		wget https://github.com/mastercodeon31415/copyparty-playit-android/raw/refs/heads/main/rootfs/kali-rootfs-playit-copyparty.tar.xz.part-01 ./kali-rootfs-playit-copyparty.tar.xz.part-01
-		wget https://github.com/mastercodeon31415/copyparty-playit-android/raw/refs/heads/main/rootfs/kali-rootfs-playit-copyparty.tar.xz.part-02 ./kali-rootfs-playit-copyparty.tar.xz.part-02
-		wget https://github.com/mastercodeon31415/copyparty-playit-android/raw/refs/heads/main/rootfs/kali-rootfs-playit-copyparty.tar.xz.part-03 ./kali-rootfs-playit-copyparty.tar.xz.part-03
-		wget https://github.com/mastercodeon31415/copyparty-playit-android/raw/refs/heads/main/rootfs/kali-rootfs-playit-copyparty.tar.xz.part-04 ./kali-rootfs-playit-copyparty.tar.xz.part-04
+		wget https://github.com/mastercodeon31415/copyparty-playit-android/raw/refs/heads/main/rootfs/${archurl}/kali-rootfs-playit-copyparty.tar.xz.part-00 ./kali-rootfs-playit-copyparty.tar.xz.part-00
+		wget https://github.com/mastercodeon31415/copyparty-playit-android/raw/refs/heads/main/rootfs/${archurl}/kali-rootfs-playit-copyparty.tar.xz.part-01 ./kali-rootfs-playit-copyparty.tar.xz.part-01
+		wget https://github.com/mastercodeon31415/copyparty-playit-android/raw/refs/heads/main/rootfs/${archurl}/kali-rootfs-playit-copyparty.tar.xz.part-02 ./kali-rootfs-playit-copyparty.tar.xz.part-02
+		wget https://github.com/mastercodeon31415/copyparty-playit-android/raw/refs/heads/main/rootfs/${archurl}/kali-rootfs-playit-copyparty.tar.xz.part-03 ./kali-rootfs-playit-copyparty.tar.xz.part-03
+		wget https://github.com/mastercodeon31415/copyparty-playit-android/raw/refs/heads/main/rootfs/${archurl}/kali-rootfs-playit-copyparty.tar.xz.part-04 ./kali-rootfs-playit-copyparty.tar.xz.part-04
 	fi
 	cur=`pwd`
 	mkdir -p "$folder"
 	cd "$folder"
 	echo "Decompressing Rootfs, please be patient."
 	cat ${cur}/kali-rootfs-playit-copyparty.tar.xz.part-* > ${cur}/kali-rootfs-playit-copyparty.tar.xz
-	rm kali-rootfs-playit-copyparty.tar.xz.part-00
-	rm kali-rootfs-playit-copyparty.tar.xz.part-01
-	rm kali-rootfs-playit-copyparty.tar.xz.part-02
-	rm kali-rootfs-playit-copyparty.tar.xz.part-03
-	rm kali-rootfs-playit-copyparty.tar.xz.part-04
+	rm ${cur}/kali-rootfs-playit-copyparty.tar.xz.part-00
+	rm ${cur}/kali-rootfs-playit-copyparty.tar.xz.part-01
+	rm ${cur}/kali-rootfs-playit-copyparty.tar.xz.part-02
+	rm ${cur}/kali-rootfs-playit-copyparty.tar.xz.part-03
+	rm ${cur}/kali-rootfs-playit-copyparty.tar.xz.part-04
 	
 	proot --link2symlink tar -xJf ${cur}/${tarball}||:
 	cd "$cur"
