@@ -4,14 +4,14 @@ YELLOW='\033[0;33m'
 NC='\033[0m' # No Color
 
 printf "${GREEN}[###PlayIt Copyparty INSTALLER###] Installing python and ffmpeg into Termux\n${NC}"
-pgk install python -y
-pgk install ffmpeg -y
+apt-get install python -y
+apt-get install ffmpeg -y
 
 read -p "Press Enter to continue..."
 
 printf "${GREEN}[###PlayIt Copyparty INSTALLER###] Installing Copyparty optional deps into Termux\n${NC}"
 
-pkg install argon2 libjpeg-turbo libwebp -y
+apt-get install argon2 libjpeg-turbo libwebp -y
 pip install --upgrade Pillow
 pip install pillow-heif
 pip install pyvips
