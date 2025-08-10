@@ -28,7 +28,7 @@ rm -rf ./kali-binds
 rm -rf ./kali-fs
 rm -rf ./start-kali
 printf "${GREEN}[###PlayIt Copyparty INSTALLER###] Uninstall finished!\n${NC}"
-rm -rf ./ngrok-adb-uninstall
+rm -rf ./playit-copyparty-uninstall
 EOT
 chmod +x ./playit-copyparty-uninstall
 
