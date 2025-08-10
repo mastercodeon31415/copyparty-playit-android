@@ -52,9 +52,12 @@ chmod 777 ./kali.sh
 rm -rf ./kali.sh
 mv ./start-kali.sh ./start-kali
 
-printf "${GREEN}[###PlayIt Copyparty INSTALLER###] Navigating to kali-fs/root and creating copyparty execution script\n${NC}"
+printf "${GREEN}[###PlayIt Copyparty INSTALLER###] Navigating to Termux home directory and downloading copyparty + making shell alias\n${NC}"
 cd /data/data/com.termux/files/home
-mv /data/data/com.termux/files/usr/bin/kali-fs/bin/copyparty-sfx.py ./copyparty-sfx.py
+
+wget https://github.com/9001/copyparty/releases/latest/download/copyparty-sfx.py
+
+#mv /data/data/com.termux/files/usr/bin/kali-fs/bin/copyparty.py ./copyparty-sfx.py
 touch ./copyparty
 echo python3 ./copyparty-sfx.py '"$@"' > ./copyparty
 chmod +x ./copyparty
