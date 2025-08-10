@@ -18,6 +18,6 @@ start-kali
 
 Then you can run playit to start the playit agent.
 Copyparty is not installed into the chroot.
-You must ```exit``` the chroot and then run ```./copyparty ``` to start copyparty. You can pass any arguments you need with the shell alias. 
+You must ```exit``` the chroot and then run ```copyparty ``` to start copyparty. You can pass any arguments you need with the shell alias. 
 
 Then simply run copyparty or playit
