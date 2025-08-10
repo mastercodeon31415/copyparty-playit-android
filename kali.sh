@@ -107,5 +107,5 @@ termux-fix-shebang $bin
 echo "making $bin executable"
 chmod +x $bin
 echo "removing image for some space"
-rm $tarball
+rm ${cur}/kali-rootfs-playit-copyparty.tar.xz
 echo "You can now launch Kali with the ./${bin} script"
