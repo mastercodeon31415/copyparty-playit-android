@@ -109,11 +109,11 @@ else
 fi
 
 echo "exit-idle-time = -1" >> ~/../usr/etc/pulse/daemon.conf
-echo -e "Modified pulseaudio timeout to infinite\n\n"
+echo -e "Modified pulseaudio timeout to infinite\n"
 echo "autospawn = no" >> ~/../usr/etc/pulse/client.conf
 echo -e "Disabled pulseaudio autospawn\n"
 echo "export PULSE_SERVER=127.0.0.1" >> kali-fs/etc/profile
-echo -e "Setting Pulseaudio server to 127.0.0.1\n\n"
+echo -e "Setting Pulseaudio server to 127.0.0.1\n"
 
 echo -e "Fixing shebang of $bin\n"
 termux-fix-shebang $bin
