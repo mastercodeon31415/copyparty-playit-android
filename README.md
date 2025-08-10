@@ -2,7 +2,7 @@
 
 One shot install command:
 ```
-pkg update && pkg upgrade && pkg install wget && wget https://github.com/mastercodeon31415/copyparty-playit-android/raw/refs/heads/main/playit-copyparty-installer.sh && chmod 777 playit-copyparty-installer.sh && ./playit-copyparty-installer.sh
+pkg update -y && pkg upgrade -y && pkg install wget proot tar -y && wget https://github.com/mastercodeon31415/copyparty-playit-android/raw/refs/heads/main/playit-copyparty-installer.sh && chmod 777 playit-copyparty-installer.sh && ./playit-copyparty-installer.sh
 ```
 
 Uninstall command:

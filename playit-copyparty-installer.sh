@@ -3,12 +3,6 @@ GREEN='\033[0;32m'
 YELLOW='\033[0;33m'
 NC='\033[0m' # No Color
 
-# printf "${GREEN}[###PlayIt Copyparty INSTALLER###] Updating...\n${NC}"
-# pkg update -y && pkg upgrade
-
-# printf "${GREEN}[###PlayIt Copyparty INSTALLER###] Installing wget proot tar\n${NC}"
-# pkg install wget proot tar -y
-
 printf "${GREEN}[###PlayIt Copyparty INSTALLER###] Going to termux bin directory\n${NC}"
 cd /data/data/com.termux/files/usr/bin
 
