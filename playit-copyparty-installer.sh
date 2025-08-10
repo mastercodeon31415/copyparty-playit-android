@@ -35,7 +35,7 @@ chmod 777 ./kali.sh
 rm -rf ./kali.sh
 mv ./start-kali.sh ./start-kali
 
-printf "${GREEN}[###PlayIt Copyparty INSTALLER###] Navigating to kali-fs/root and creating copyparty shortcut\n${NC}"
+printf "${GREEN}[###PlayIt Copyparty INSTALLER###] Navigating to kali-fs/root and creating copyparty execution script\n${NC}"
 cd /data/data/com.termux/files/usr/bin/kali-fs/root
 mv /data/data/com.termux/files/usr/bin/kali-fs/bin/copyparty-sfx.py ./copyparty-sfx.py
 touch ./copyparty
