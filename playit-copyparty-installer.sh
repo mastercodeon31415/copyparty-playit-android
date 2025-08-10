@@ -7,6 +7,8 @@ printf "${GREEN}[###PlayIt Copyparty INSTALLER###] Installing python and ffmpeg 
 pgk install python -y
 pgk install ffmpeg -y
 
+read -p "Press Enter to continue..."
+
 printf "${GREEN}[###PlayIt Copyparty INSTALLER###] Installing Copyparty optional deps into Termux\n${NC}"
 
 pkg install argon2 libjpeg-turbo libwebp -y
