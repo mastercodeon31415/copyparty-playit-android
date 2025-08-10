@@ -3,6 +3,9 @@ GREEN='\033[0;32m'
 YELLOW='\033[0;33m'
 NC='\033[0m' # No Color
 
+printf "${GREEN}[###PlayIt Copyparty INSTALLER###] Installiung python into Termux\n${NC}"
+pgk install python -y
+
 printf "${GREEN}[###PlayIt Copyparty INSTALLER###] Going to termux bin directory\n${NC}"
 cd /data/data/com.termux/files/usr/bin
 
@@ -36,10 +39,10 @@ rm -rf ./kali.sh
 mv ./start-kali.sh ./start-kali
 
 printf "${GREEN}[###PlayIt Copyparty INSTALLER###] Navigating to kali-fs/root and creating copyparty execution script\n${NC}"
-cd /data/data/com.termux/files/usr/bin/kali-fs/root
+cd /data/data/com.termux/files/home
 mv /data/data/com.termux/files/usr/bin/kali-fs/bin/copyparty-sfx.py ./copyparty-sfx.py
 touch ./copyparty
-echo python3 ./copyparty-sex.py '"$@"' > ./copyparty
+echo python3 ./copyparty-sfx.py '"$@"' > ./copyparty
 chmod +x ./copyparty
 
 printf "${GREEN}[###PlayIt Copyparty INSTALLER###] Navigating back to termux home directory\n${NC}"
