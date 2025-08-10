@@ -21,3 +21,6 @@ Copyparty is not installed into the chroot.
 You must ```exit``` the chroot and then run ```copyparty ``` to start copyparty. You can pass any arguments you need with the shell alias. 
 
 Then simply run copyparty or playit
+
+##Demo video
+[![Installation Demo](https://img.youtube.com/vi/rvyFQc77POQ/0.jpg)](https://www.youtube.com/watch?v=rvyFQc77POQ)
