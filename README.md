@@ -22,4 +22,5 @@ You must ```exit``` the chroot and then run ```copyparty ``` to start copyparty.
 
 Then simply run copyparty or playit
 
+Demo video i posted to youtube
 [![Installation Demo](https://img.youtube.com/vi/rvyFQc77POQ/0.jpg)](https://www.youtube.com/watch?v=rvyFQc77POQ)
