@@ -11,9 +11,13 @@ playit-copyparty-uninstall
 ```
 
 Usage:
-Start kali by the following:
+Start the kali chroot by the following:
 ```
 start-kali
 ```
+
+Then you can run playit to start the playit agent.
+Copyparty is not installed into the chroot.
+You must ```exit``` the chroot and then run ```./copyparty ``` to start copyparty. You can pass any arguments you need with the shell alias. 
 
 Then simply run copyparty or playit
