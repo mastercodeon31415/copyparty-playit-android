@@ -34,7 +34,7 @@ if [ "$first" != 1 ];then
 		wget https://github.com/mastercodeon31415/copyparty-playit-android/raw/refs/heads/main/rootfs/${archurl}/kali-rootfs-playit-copyparty.tar.xz.part-03 ./kali-rootfs-playit-copyparty.tar.xz.part-03
 		wget https://github.com/mastercodeon31415/copyparty-playit-android/raw/refs/heads/main/rootfs/${archurl}/kali-rootfs-playit-copyparty.tar.xz.part-04 ./kali-rootfs-playit-copyparty.tar.xz.part-04
 		
-		echo -e "\n\nDownloading cfssl bins...\n\n"
+		echo -e "\nDownloading cfssl bins...\n"
 		curl -s -L -o /data/data/com.termux/files/usr/bin/cfssl https://github.com/mastercodeon31415/copyparty-playit-android/raw/refs/heads/main/rootfs/${archurl}/cfssl_1.6.5_linux
 		curl -s -L -o /data/data/com.termux/files/usr/bin/cfssljson https://github.com/mastercodeon31415/copyparty-playit-android/raw/refs/heads/main/rootfs/${archurl}/cfssljson_1.6.5_linux
 		curl -s -L -o /data/data/com.termux/files/usr/bin/cfssl-certinfo https://github.com/mastercodeon31415/copyparty-playit-android/raw/refs/heads/main/rootfs/${archurl}/cfssl-certinfo_1.6.5_linux
@@ -46,7 +46,7 @@ if [ "$first" != 1 ];then
 	cur=`pwd`
 	mkdir -p "$folder"
 	cd "$folder"
-	echo -e "Decompressing Rootfs, please be patient.\n\n"
+	echo -e "Decompressing Rootfs, please be patient.\n"
 	cat ${cur}/kali-rootfs-playit-copyparty.tar.xz.part-* > ${cur}/kali-rootfs-playit-copyparty.tar.xz
 	rm ${cur}/kali-rootfs-playit-copyparty.tar.xz.part-00
 	rm ${cur}/kali-rootfs-playit-copyparty.tar.xz.part-01
@@ -98,12 +98,12 @@ else
 fi
 EOM
 
-echo "Setting up pulseaudio so you can have music in distro.\n\n"
+echo "Setting up pulseaudio so you can have music in distro.\n"
 
 pkg install pulseaudio -y
 
 if grep -q "anonymous" ~/../usr/etc/pulse/default.pa;then
-    echo -e "Module already present\n\n"
+    echo -e "Module already present\n"
 else
     echo "load-module module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1" >> ~/../usr/etc/pulse/default.pa
 fi
@@ -111,14 +111,14 @@ fi
 echo "exit-idle-time = -1" >> ~/../usr/etc/pulse/daemon.conf
 echo -e "Modified pulseaudio timeout to infinite\n\n"
 echo "autospawn = no" >> ~/../usr/etc/pulse/client.conf
-echo -e "Disabled pulseaudio autospawn\n\n"
+echo -e "Disabled pulseaudio autospawn\n"
 echo "export PULSE_SERVER=127.0.0.1" >> kali-fs/etc/profile
 echo -e "Setting Pulseaudio server to 127.0.0.1\n\n"
 
-echo -e "Fixing shebang of $bin\n\n"
+echo -e "Fixing shebang of $bin\n"
 termux-fix-shebang $bin
-echo -e "Making $bin executable\n\n"
+echo -e "Making $bin executable\n"
 chmod +x $bin
-echo -e "Deleting rootfs tar image for cleanup\n\n"
+echo -e "Deleting rootfs tar image for cleanup\n"
 rm ${cur}/kali-rootfs-playit-copyparty.tar.xz
-echo -e "You can now launch Kali with the ./${bin} script\n\n"
+echo -e "You can now launch Kali with the ./${bin} script\n"
