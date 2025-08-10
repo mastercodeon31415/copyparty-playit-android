@@ -7,16 +7,19 @@ printf "${GREEN}[###PlayIt Copyparty INSTALLER###] Installing python and ffmpeg 
 apt-get install python -y
 apt-get install ffmpeg -y
 
-read -p "Press Enter to continue..."
-
 printf "${GREEN}[###PlayIt Copyparty INSTALLER###] Installing Copyparty optional deps into Termux\n${NC}"
 
-apt-get install argon2 libjpeg-turbo libwebp -y
+apt-get install argon2 libjpeg-turbo libwebp libheif cmake -y
 pip install --upgrade Pillow
 pip install pillow-heif
 pip install pyvips
 pip install psutil
+
+# On arm64 this package stalls in installing the backend deps
 pip install pyzmq
+
+read -p "Press enter"
+
 pip install mutagen
 pip install argon2
 pip install argon2-cffi

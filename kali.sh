@@ -34,6 +34,7 @@ if [ "$first" != 1 ];then
 		wget https://github.com/mastercodeon31415/copyparty-playit-android/raw/refs/heads/main/rootfs/${archurl}/kali-rootfs-playit-copyparty.tar.xz.part-03 ./kali-rootfs-playit-copyparty.tar.xz.part-03
 		wget https://github.com/mastercodeon31415/copyparty-playit-android/raw/refs/heads/main/rootfs/${archurl}/kali-rootfs-playit-copyparty.tar.xz.part-04 ./kali-rootfs-playit-copyparty.tar.xz.part-04
 		
+		echo Downloading cfssl bins...
 		curl -s -L -o /data/data/com.termux/files/usr/bin/cfssl https://github.com/mastercodeon31415/copyparty-playit-android/raw/refs/heads/main/rootfs/${archurl}/cfssl_1.6.5_linux
 		curl -s -L -o /data/data/com.termux/files/usr/bin/cfssljson https://github.com/mastercodeon31415/copyparty-playit-android/raw/refs/heads/main/rootfs/${archurl}/cfssljson_1.6.5_linux
 		curl -s -L -o /data/data/com.termux/files/usr/bin/cfssl-certinfo https://github.com/mastercodeon31415/copyparty-playit-android/raw/refs/heads/main/rootfs/${archurl}/cfssl-certinfo_1.6.5_linux
