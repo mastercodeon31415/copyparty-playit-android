@@ -34,7 +34,7 @@ if [ "$first" != 1 ];then
 	mkdir -p "$folder"
 	cd "$folder"
 	echo "Decompressing Rootfs, please be patient."
-	cat kali-rootfs-playit-copyparty.tar.xz.part-* > kali-rootfs-playit-copyparty.tar.xz
+	cat ${cur}/kali-rootfs-playit-copyparty.tar.xz.part-* > ${cur}/kali-rootfs-playit-copyparty.tar.xz
 	rm kali-rootfs-playit-copyparty.tar.xz.part-00
 	rm kali-rootfs-playit-copyparty.tar.xz.part-01
 	rm kali-rootfs-playit-copyparty.tar.xz.part-02
