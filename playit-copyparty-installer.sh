@@ -35,11 +35,15 @@ chmod 777 ./kali.sh
 rm -rf ./kali.sh
 mv ./start-kali.sh ./start-kali
 
-printf "${GREEN}[###PlayIt Copyparty INSTALLER###] Navigating to kali-fs/bin\n${NC}"
-cd /data/data/com.termux/files/usr/bin/kali-fs/bin
+printf "${GREEN}[###PlayIt Copyparty INSTALLER###] Navigating to kali-fs/root and creating copyparty shortcut\n${NC}"
+cd /data/data/com.termux/files/usr/bin/kali-fs/root
+mv /data/data/com.termux/files/usr/bin/kali-fs/bin/copyparty-sfx.py ./copyparty-sfx.py
+touch ./copyparty
+echo python3 ./copyparty-sex.py '"$@"' > ./copyparty
+chmod +x ./copyparty
 
 printf "${GREEN}[###PlayIt Copyparty INSTALLER###] Navigating back to termux home directory\n${NC}"
 cd 
 
-printf "${GREEN}[###PlayIt Copyparty INSTALLER###] Ngrok-adb Install complete! Starting kali chroot!\n${NC}"
+printf "${GREEN}[###PlayIt Copyparty INSTALLER###] PlayIt Copyparty Install complete! Starting kali chroot!\n${NC}"
 start-kali
