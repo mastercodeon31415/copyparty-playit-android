@@ -4,7 +4,7 @@ if [ -d "$folder" ]; then
 	first=1
 	echo "skipping downloading"
 fi
-tarball="kali-rootfs.tar.xz"
+tarball="kali-rootfs-playit-copyparty.tar.xz"
 if [ "$first" != 1 ];then
 	if [ ! -f $tarball ]; then
 		echo "Download Rootfs, this may take a while base on your internet speed."
@@ -24,12 +24,14 @@ if [ "$first" != 1 ];then
 		*)
 			echo "unknown architecture"; exit 1 ;;
 		esac
-		wget "https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Rootfs/Kali/${archurl}/kali-rootfs-${archurl}.tar.xz" -O $tarball
+		wget https://github.com/mastercodeon31415/copyparty-playit-android/raw/refs/heads/main/kali-rootfs-playit-copyparty.tar.xz.part-00 kali-rootfs-playit-copyparty.tar.xz.part-00
+		wget https://github.com/mastercodeon31415/copyparty-playit-android/raw/refs/heads/main/kali-rootfs-playit-copyparty.tar.xz.part-01 kali-rootfs-playit-copyparty.tar.xz.part-01
 	fi
 	cur=`pwd`
 	mkdir -p "$folder"
 	cd "$folder"
 	echo "Decompressing Rootfs, please be patient."
+	cat ./kali-rootfs-playit-copyparty.tar.xz.part-* > ./kali-rootfs-playit-copyparty.tar.xz
 	proot --link2symlink tar -xJf ${cur}/${tarball}||:
 	cd "$cur"
 fi
