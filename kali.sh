@@ -34,12 +34,12 @@ if [ "$first" != 1 ];then
 	mkdir -p "$folder"
 	cd "$folder"
 	echo "Decompressing Rootfs, please be patient."
-	cat ./kali-rootfs-playit-copyparty.tar.xz.part-* > ./kali-rootfs-playit-copyparty.tar.xz
-	rm ./kali-rootfs-playit-copyparty.tar.xz.part-00
-	rm ./kali-rootfs-playit-copyparty.tar.xz.part-01
-	rm ./kali-rootfs-playit-copyparty.tar.xz.part-02
-	rm ./kali-rootfs-playit-copyparty.tar.xz.part-03
-	rm ./kali-rootfs-playit-copyparty.tar.xz.part-04
+	cat kali-rootfs-playit-copyparty.tar.xz.part-* > kali-rootfs-playit-copyparty.tar.xz
+	rm kali-rootfs-playit-copyparty.tar.xz.part-00
+	rm kali-rootfs-playit-copyparty.tar.xz.part-01
+	rm kali-rootfs-playit-copyparty.tar.xz.part-02
+	rm kali-rootfs-playit-copyparty.tar.xz.part-03
+	rm kali-rootfs-playit-copyparty.tar.xz.part-04
 	
 	proot --link2symlink tar -xJf ${cur}/${tarball}||:
 	cd "$cur"
