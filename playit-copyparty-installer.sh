@@ -55,10 +55,10 @@ mv ./start-kali.sh ./start-kali
 printf "${GREEN}[###PlayIt Copyparty INSTALLER###] Navigating to Termux home directory and downloading copyparty + making shell alias\n\n${NC}"
 cd /data/data/com.termux/files/home
 
-wget https://github.com/9001/copyparty/releases/latest/download/copyparty-sfx.py
-touch ./copyparty
-echo python3 ./copyparty-sfx.py '"$@"' > ./copyparty
-chmod +x ./copyparty
+wget -O /data/data/com.termux/files/usr/bin/copyparty-sfx.py https://github.com/9001/copyparty/releases/latest/download/copyparty-sfx.py
+touch /data/data/com.termux/files/usr/bin/copyparty
+echo python3 /data/data/com.termux/files/usr/bin/copyparty-sfx.py '"$@"' > /data/data/com.termux/files/usr/bin/copyparty
+chmod +x /data/data/com.termux/files/usr/bin/copyparty
 
 cd 
 
